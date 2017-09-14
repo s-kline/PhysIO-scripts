@@ -58,7 +58,7 @@ function [] = physio_job_batch(data_path, prefix, session_name)
             matlabbatch{2}.spm.tools.physio.log_files.respiration = {''};
 
     % get series number of right session from nifti-folder
-        cd(strcat(subject_dir, '\MRT\NIFTI\REST')) %go to nifti directory of the right session
+        cd(strcat(subject_dir, '\MRT\NIFTI\', session_name)) %go to nifti directory of the right session
         
         % list MoCo or epi folders
         which_folders = {'*MoCo*', '*epi*'};
