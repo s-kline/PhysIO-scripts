@@ -2,6 +2,8 @@
 ## author of this readme: Sanja Klein, 9.10.2017
 These scripts are for creating movement regressors from cardiac data for inclusion in the single subject analysis.
 
+Before running the physio correction, you should look at the .pptx for some theory and/or read the paper ( The PhysIO Toolbox for Modeling Physiological Noise in fMRI Data; Kasper et al., 2017) for more insight.
+
 The main function is physio_job_batch, the other .m-files are for different folder structures (LeAD) or other analysis scripts (multisession, GLM etc)
 You can call it with callbatch.m from matlab or physio_batch.bat to call matlab and spm from the windows cmd.
 The arguments you need to specify are described at the top of physio_job_batch
