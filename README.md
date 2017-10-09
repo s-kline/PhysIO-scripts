@@ -21,8 +21,8 @@ interaction regressors (cardiacXrespiratory) and the order might be different (s
 
 if you added the movement regressors from the preprocessing, those come after the physio. 6 additional columns.
 
-****after physio_job_batch, you have to do quality control:
-	The current course of action is to go through the Matlab output and look for warnings and errors that ocurred during processing the subjects.
+****the current agreed-on proceeding for quality control:
+	Go through the Matlab output and look for warnings and errors that ocurred during processing the subjects.
 	PhysIO_qualicheck contains a basic decision tree to handle this (probably needs to be expanded). 
 
 
