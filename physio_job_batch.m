@@ -5,7 +5,8 @@
 %-----------------------------------------------------------------------
 
 %% TO DO for more general usability:
-% test try/catch for dcm file input. does it work?
+% have the error messages saved in a more conveniernt form than just
+% displayed in the command window
 
 
 %% additional comments:
@@ -35,10 +36,12 @@ function [] = physio_job_batch(data_path, prefix, session_name)
         current_subject = all_subjects{i};
         subject_dir = strcat(base_dir, current_subject);
     %% check first if there even is a physio folder, if not go to next subject
-    % if PhysIO_results folder already exists too, this check will behave
-    % as if there are no physio folders at all and go to else. 
-    % no idea why
+    % if PhysIO_results folder already exists too, delete it
         cd(subject_dir)
+        physio_results_folder = ls('PhysIO_results*');
+        if exist(physio_results_folder, 'dir');
+            rmdir physio_results_folder
+        end 
         physio_folder = ls('Physio*');
         if exist(physio_folder, 'dir')          
          %% where u wanna get all results and output files saved?
