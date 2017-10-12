@@ -1,5 +1,5 @@
 # PhysIO-scripts
-## author of this readme: Sanja Klein, 9.10.2017
+## author of this readme: s-kline, 9.10.2017
 These scripts are for creating movement regressors from cardiac data for inclusion in the single subject analysis.
 
 Before running the physio correction, you should look at the .pptx for some theory and/or read the paper (The PhysIO Toolbox for Modeling Physiological Noise in fMRI Data; Kasper et al., 2017) for more insight.
